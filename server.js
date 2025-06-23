@@ -15,7 +15,7 @@ dotenv.config();
 const app = express();
 // CORS configuration
 app.use(cors({
-  origin: 'http://localhost:5173', // Allow only the frontend origin
+  origin: 'https://sensational-snickerdoodle-a13b80.netlify.app/', // Allow only the frontend origin
   credentials: true // Allow cookies and authorization headers
 }));
 
