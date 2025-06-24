@@ -14,11 +14,15 @@ dotenv.config();
 // Crea un'istanza dell'applicazione Express.
 const app = express();
 // CORS configuration
-app.use(cors({
-  origin: ['https://sensational-snickerdoodle-a13b80.netlify.app'], // Allow only the frontend origin
+/*app.use(cors({
+  origin: ['https://sensational-snickerdoodle-a13b80.netlify.app'], Provare così e cambiare anche su render il sito del frontend
   credentials: true, // Allow cookies and authorization headers
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization']
+}));*/
+app.use(cors({
+  origin: 'https://sensational-snickerdoodle-a13b80.netlify.app', // Allow only the frontend origin 
+  credentials: true, // Allow cookies and authorization headers
 }));
 
 
