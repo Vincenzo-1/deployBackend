@@ -53,7 +53,8 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.use(express.json()); //per poter leggere i dati in formato JSON
-app.use('/api/auth', authRoutes);
+//app.use('/api/auth', authRoutes); prova
+app.use('/auth', authRoutes);
 app.use('/api/candidature', candidatureRoutes);
 app.use('/api/postAnnunci', postAnnunciRoutes);
 
