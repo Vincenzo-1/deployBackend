@@ -54,7 +54,7 @@ app.use(passport.session());
 
 app.use(express.json()); //per poter leggere i dati in formato JSON
 //app.use('/api/auth', authRoutes); prova
-app.use('/api/auth', authRoutes);
+app.use('/auth', authRoutes);
 app.use('/api/candidature', candidatureRoutes);
 app.use('/api/postAnnunci', postAnnunciRoutes);
 
@@ -63,7 +63,7 @@ app.use('/api/postAnnunci', postAnnunciRoutes);
 
 //middleware session() e gestisce automaticamente la crea
 mongoose
-  .connect(MONGOURI, {useUnifiedTopology: true,}) // migliora la gestione dei cluster, delle repliche, della riconnessione automatica, del monitoraggio, ecc.Senza questa opzione, in passato c’erano warning in console 
+  .connect(MONGOURI) // migliora la gestione dei cluster, delle repliche, della riconnessione automatica, del monitoraggio, ecc.Senza questa opzione, in passato c’erano warning in console 
   .then(() => {
     console.log('MongoDB connesso con successo');
     app.listen(PORT, () => {
