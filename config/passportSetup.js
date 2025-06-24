@@ -18,7 +18,7 @@ passport.use(
     // clientSecret: Segreto client OAuth fornito da Google Cloud Console.
     clientSecret: process.env.GOOGLE_CLIENT_SECRET,
     // callbackURL: L'URL a cui Google reindirizzerà l'utente dopo l'autenticazione. Deve corrispondere a quello configurato in Google Cloud Console.
-    callbackURL: 'https://deploybackend-3-47m8.onrender.com', //Questo è l’indirizzo a cui Google reindirizzerà l’utente dopo l’autenticazione, permettendo alla tua applicazione di completare il processo di login.
+    callbackURL: 'https://deploybackend-3-47m8.onrender.com/auth/google/callback', //Questo è l’indirizzo a cui Google reindirizzerà l’utente dopo l’autenticazione, permettendo alla tua applicazione di completare il processo di login.
     //callbackURL servirà in modo tale da riportarmi qui una volta fatto il login
     // scope: Array di stringhe che specificano quali informazioni dell'utente richiedere a Google (profilo e email in questo caso).
     scope: ['profile', 'email'] //profile talvolta include email, ma è meglio specificare entrambi per sicurezza, perchè non è detto.
